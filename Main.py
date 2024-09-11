@@ -1,9 +1,17 @@
 import random
 
-cards = ["Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9" "10", "Jack", "Queen", "King"]
+cards = ["Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 suits = ["Clubs", "Spades", "Hearts", "Diamonds"]
+deck = []
 
-newCard = (random.choice(cards) + " of " + random.choice(suits))
+def drawCard ():
+    newCard = (random.choice(cards) + " of " + random.choice(suits))
+    print("You have drawn the " + newCard)
+    
+    deck.append(newCard)
+    print(deck)
 
-print("You have drawn the " + newCard)
-print("hi")
+print("START GAME")
+drawCard()
+
+
