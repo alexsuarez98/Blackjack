@@ -6,3 +6,4 @@ suits = ["Clubs", "Spades", "Hearts", "Diamonds"]
 newCard = (random.choice(cards) + " of " + random.choice(suits))
 
 print("You have drawn the " + newCard)
+print("hi")
