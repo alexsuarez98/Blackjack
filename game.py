@@ -95,12 +95,30 @@ def play_game():
 
   if player_hand.is_blackjack() and dealer_hand.is_blackjack():
     print("Both Player and Dealer have a BlackJack! It's a tie!")
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+    if play_again == 'yes':
+     print()
+     print("-----------------------------")
+     print()
+     play_game()
     return
   elif player_hand.is_blackjack():
     print("Player has a Blackjack! Player wins!")
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+    if play_again == 'yes':
+      print()
+      print("-----------------------------")
+      print()
+      play_game()
     return
   elif dealer_hand.is_blackjack():
     print("Dealer has a Blackjack. Dealer wins.")
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+    if play_again == 'yes':
+      print()
+      print("-----------------------------")
+      print()
+      play_game()
     return
   #checks for blackjacks and exits the function after
 
@@ -112,7 +130,13 @@ def play_game():
       if player_hand.hand_value() > 21:
        print("\nDealer's hand:", dealer_hand)
        print("\nPlayer busts, Dealer wins.")
-       return
+       play_again = input("Do you want to play again? (yes/no): ").lower()
+       if play_again == 'yes':
+         print()
+         print("-----------------------------")
+         print()
+         play_game()
+      return
     else:
       break
       #asks the player if they want to hit or stand, if they hit it will add a card to 
